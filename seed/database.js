@@ -100,10 +100,11 @@ class Database {
         id INTEGER PRIMARY KEY AUTOINCREMENT, 
         firstName VARCHAR(255) NOT NULL DEFAULT '', 
         lastName VARCHAR(255) NOT NULL DEFAULT '', 
-        emailAddress VARCHAR(255) NOT NULL DEFAULT '' UNIQUE, 
+        emailAddress VARCHAR(255) NOT NULL DEFAULT '', 
         password VARCHAR(255) NOT NULL DEFAULT '', 
         createdAt DATETIME NOT NULL, 
-        updatedAt DATETIME NOT NULL
+        updatedAt DATETIME NOT NULL,
+        UNIQUE (emailAddress)
       );
     `);
 
